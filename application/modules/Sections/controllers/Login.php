@@ -139,26 +139,26 @@ class Login extends Config{
             $mail->Host = 'smtp.gmail.com;';
             $mail->SMTPAuth = true;
             //$mail->Host = 'http://vitermedicalproject.com.mx';
-            $mail->Username = 'itifjpp@gmail.com';
-            $mail->Password = 'feliPE#$5293jesuSgl';
+            $mail->Username = 'albertoyovanip@gamil.com';
+            $mail->Password = 'alberTO12#/';
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
-            $mail->setFrom('itifjpp@gmail.com', 'Central de Monitoreo | Viter Médical');
+            $mail->setFrom('albertoyovanip@gamil.com', 'Central de Monitoreo | Viter Médical');
             $mail->addAddress($usuario['usuario_mail'],$usuario['usuario_nombre'].' '.$usuario['usuario_ap'].' '.$usuario['usuario_am']);
             $mail->isHTML(true);
-            $mail->Subject = 'Envío de Signos Vitales';
+            $mail->Subject = 'Envío de Correo de Prueba';
             $Msj= $this->plantillaMail(array(
                 'paciente_nombre'=>$usuario['usuario_nombre'].' '.$usuario['usuario_ap'].' '.$usuario['usuario_am'],
                 'sv_ta'=>'Todo es prueba',
                 'sv_fc'=>'Todo es prueba',
-                'sv_oximetria'=>$Sv['sv_oximetria'],
+                'sv_oximetria'=>'Todo es prueba',
                 'sv_temp'=>'Todo es prueba',
                 'area_nombre'=>'Todo es prueba',
                 'hospital_nombre'=>'Todo es prueba',
                 'hospital_direccion'=>'Todo es prueba'
             ));
             $mail->Body=$Msj;
-            $mail->AltBody = 'ENVÍO DE SIGNOS VITALES AL PACIENTE';
+            $mail->AltBody = 'RECUPERACIÓN DE CONTRASEÑA';
 
             $mail->send();
             $this->setOutput(array('accion'=>'1'));
