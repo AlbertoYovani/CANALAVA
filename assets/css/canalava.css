@@ -1,0 +1,161 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31/08/2017, 01:07:20 PM
+    Author     : felipe de jesus <itifjpp@gmail.com>
+*/
+/*ESTILOS ICONOS HTML5 IMAGE UPLOAD MODIFICADOS*/
+.html5imageupload .tools i{
+    display: inline-block!important;
+    color: white!important;
+    font-size: 20px!important;
+    margin-right: 3px!important;
+    position: relative!important;
+     top: 2px!important; 
+    float: left!important;
+}
+.i-20{
+    font-size: 20px!important;
+}.i-22{
+    font-size: 20px!important;
+}.i-24{
+    font-size: 24px!important;
+}
+.i-color-blue{
+    color: #004A82!important;
+}
+.back-canalava{
+    background: #286ca3 !important;
+    color: white!important;
+}
+.col-centered{
+    float: none!important;
+    margin: auto!important;
+}
+.border-sigcamara{
+    border: 1px solid #004A82!important;
+}
+.padding-15{
+    margin-top: 15px; 
+    margin-bottom: 15px;
+}
+.padding-5{
+    margin-top: 5px; 
+    margin-bottom: 5px;
+}
+.padding-2{
+    margin-top: 2px; 
+    margin-bottom: 2px;
+}
+.padding-X4{
+    margin-top: -4px; 
+    margin-bottom: -4px;
+}
+.padding-X8{
+    margin-top: -8px; 
+    margin-bottom: -8px;
+}
+.padding-X15{
+    margin-top: -15px; 
+    margin-bottom: -15px;
+}
+.border-1{
+    border: 1px solid #55595D !important;
+}
+.back-desactive{
+    background: #D1DADE !important;
+}
+.back-active{
+    background: #FFFFFF !important;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+.btn-circle.btn-lg {
+    width: 60px;
+    height: 60px;
+    padding: 15px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+    color: white;
+}
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    font-size: 24px;
+    line-height: 1.33;
+    border-radius: 35px;
+.accion{
+    color: white; 
+    font-size: 19px;
+    margin-right: 3px;
+}
+.accion2{
+    margin-right: -8xp !important;
+    font-size: 23px !important;
+    color: #FFFFFF !important;
+}
+.btn-sigCamara{
+    display: inline-block;
+    padding: 9px 12px;
+    padding-top: 7px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #5e5e5e;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #d1dade;
+    background-image: none !important;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+    transition: all 0.12s linear 0s !important;
+    font: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}}
+.placeholder {
+    border: 1px solid green;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 10px #888;
+    -moz-box-shadow: 0px 0px 10px #888;
+    box-shadow: 0px 0px 10px #888;
+}
+.tile {
+    height: 100px;
+}
+.grid {
+    margin-top: 1em;
+}
+#map {
+    width: 100%;
+    height: 80%;
+}
+.hr-style-white{
+    margin-top: 4px;
+    margin-bottom: 8px; 
+    border: 0!important; 
+    height: 1px!important;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255,0))!important;
+}
+.img-circle-logo img{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.width100{
+    width: 100% !important; 
+}
