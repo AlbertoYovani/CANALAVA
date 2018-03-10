@@ -5,7 +5,7 @@
  *
  * @author felipe de jesus <itifjpp@gmail.com>
  */
-require_once APPPATH.'third_party/PHPMailer/class.phpmailer.php';
+
 class Config extends MX_Controller{
     public function __construct() {
         parent::__construct();
