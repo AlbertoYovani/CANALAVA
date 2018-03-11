@@ -45,7 +45,7 @@
     <!-- END HEAD -->
     <!-- BEGIN BODY -->
     
-    <body class="error-body no-top lazy">
+    <body class="error-body no-top lazy" style="background-image: url('<?= base_url()?>assets/img/fondo.jpg');background-size: cover;background-position: center">
         <div class="container">
             <div class="row login-container  ">  
                 <div class="col-md-6 col-centered tiles white" style="border-radius: 4px;margin-top: calc(5%)!important">

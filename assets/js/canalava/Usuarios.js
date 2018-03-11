@@ -90,21 +90,25 @@ $(document).ready(function(){
     
     $('.guardar_img_perfil').submit(function (e){
         e.preventDefault();
-        $.ajax({
-            url:base_url+'Sections/Usuarios/Ajax_guardar_MiPerfil',
-            type:'POST',
-            dataType:'json',
-            data:$(this).serialize()
-            , beforeSend: function () {
-                msj_loading();
-            }, success: function (data) {
-                if(data.accion === '1'){
-                    ActionCloseWindowsReload();
-                }else{
-                    msj_error_noti("¡UPS! OCURRIO UN ERROR");
+        if($('#imageUpload').val() !== ''){
+            $.ajax({
+                url:base_url+'Sections/Usuarios/Ajax_guardar_MiPerfil',
+                type:'POST',
+                dataType:'json',
+                data:$(this).serialize()
+                , beforeSend: function () {
+                    msj_loading();
+                }, success: function (data) {
+                    if(data.accion === '1'){
+                        ActionCloseWindowsReload();
+                    }else{
+                        msj_error_noti("¡UPS! OCURRIO UN ERROR");
+                    }
                 }
-            }
-        });
+            });
+        }else{
+            alert("¡CONFIRME LA ELECCIÓN DE SU PERFIL EN LA PALOMITA DE LA DERECHA!");
+        }
     });
     
     $('.guardar_nuevo_archivo').submit( function(e){

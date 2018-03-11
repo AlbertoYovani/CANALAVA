@@ -157,7 +157,7 @@ class Usuarios extends Config{
     }
     
     public function UserNewPassword() {
-        $update = $this->config_mdl->sqlUpdate('usuarios',array(
+        $this->config_mdl->sqlUpdate('usuarios',array(
             'usuario_password'=> $this->input->post('new_password')
         ), array(
             'usuario_id'=> $this->input->post('usuario_id')
