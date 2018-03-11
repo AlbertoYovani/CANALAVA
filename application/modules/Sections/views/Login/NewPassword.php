@@ -48,40 +48,34 @@
                 <div class="col-md-4 col-centered" >
                     <div class="row login-container column-seperation">
                         <div class="col-md-12 "> <br>
-                            <form class="form-recovery-password">
-                                <h4 style="margin-top: -10px;margin-bottom: 20px;font-weight: bold">RECUPERAR CONTRASEÑA</h4>
-                                <h6 style="text-transform: uppercase;line-height: 1.6">Podemos ayudarte a restablecer tu contraseña. Para poder continuar por favor ingresar su email para poder enviarle un enlace de recuperación de contraseña</h6>
+                            <form class="form_new_recovery_password">
+                                <h4 style="margin-top: -10px;margin-bottom: 20px;font-weight: bold">RECUPERACIÓN DE CONTRASEÑA</h4>
+                                <h6 style="text-transform: uppercase;line-height: 1.6; color: #000">nueva contraseña</h6>
                                 <div class="form-group">
                                     <div class="input-group">
                                         <span class="input-group-addon primary">
-                                            <i class="fa fa-user"></i>
+                                            <i class="fa fa-unlock"></i>
                                         </span>
-                                        <input type="text" name="usuario_nombre" class="form-control" placeholder="USUARIO" required="">
+                                        <input type="text" name="new_password" class="form-control" placeholder="NUEVA CONTRASEÑA" required="">
                                     </div>
                                 </div>
+                                <h6 style="text-transform: uppercase;line-height: 1.6; color: #000">confirmar contraseña</h6>
                                 <div class="form-group">
                                     <div class="input-group">
                                         <span class="input-group-addon primary">
-                                            <i class="fa fa-envelope-o"></i>
+                                            <i class="fa fa-unlock-alt"></i>
                                         </span>
-                                        <input type="text" name="usuario_correo" class="form-control" placeholder="EMAIL" required="">
+                                        <input type="text" name="confirm_password" class="form-control" placeholder="CONFIRMAR CONTRASEÑA" required="">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <button class="btn btn-primary btn-cons pull-right btn-recovery-password" type="submit">ENVIAR</button>
+                                        <input type="hidden" name="usuario" value="<?= base64_decode($_GET['U'])?>">
+                                        <input type="hidden" name="usuario_id" value="<?= base64_decode(base64_decode($_GET['i']))?>">
+                                        <button class="btn btn-primary btn-cons pull-right btn-recovery-password" type="submit">CREAR</button>
                                     </div>
                                 </div>
                             </form>
-                            <div class="col-md-12 end-send-mail hide">
-                                <h5 style="text-transform: uppercase;line-height: 1.6">
-                                    HEMOS ENVIADO UN ENLACE DE RECUPERACIÓN DE CONTRASEÑA A SU CORREO, INGRESE A SU CUENTA Y SIGA LAS INTRUCCIONES
-                                </h5>
-                                <br>
-                                <a href="<?= base_url()?>">
-                                    <button class="btn btn-primary btn-block">CONTINUAR</button>
-                                </a>
-                            </div>
                         </div>        
                     </div>
                 </div>

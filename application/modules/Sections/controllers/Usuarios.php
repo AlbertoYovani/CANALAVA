@@ -152,4 +152,17 @@ class Usuarios extends Config{
         $this->setOutput(array('accion'=>'1'));
     }
     
+    public function NewPassword() {
+        $this->load->view("Login/NewPassword");
+    }
+    
+    public function UserNewPassword() {
+        $update = $this->config_mdl->sqlUpdate('usuarios',array(
+            'usuario_password'=> $this->input->post('new_password')
+        ), array(
+            'usuario_id'=> $this->input->post('usuario_id')
+        ));
+        
+        $this->setOutput(array('accion'=>'1'));
+    }
 }

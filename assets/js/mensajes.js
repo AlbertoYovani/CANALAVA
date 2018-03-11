@@ -129,7 +129,7 @@
             data:data,
             beforeSend: function (xhr) {
                 if(msj=='Si'){
-                    msj_loading()
+                    msj_loading();
                 }
             },success: function (data, textStatus, jqXHR) {
                 bootbox.hideAll();
