@@ -48,5 +48,27 @@ $(document).ready(function(){
         });
     });
     
+    $('.eliminar_img_fondo').on('click', function(e){
+        var id = $(this).attr('data-id');
+        e.preventDefault();
+        if(confirm("¿DESEA ELIMINAR ESTA IMAGEN DE FONDO PERMANENTEMENTE?")){
+            $.ajax({
+                url: base_url+'Sections/Fondos/Eliminar_fondo',
+                type: 'POST',
+                dataType: 'json',
+                data:{
+                id:id
+                }, beforeSend: function (xhr) {
+                    msj_loading();
+                }, success: function (data) {
+                    if(data.accion === '1'){
+                        ActionWindowsReload();
+                    }
+                }, error: function (e) {
+                    e.preventDefault();
+                }
+            });
+        }
+    });
 });
 

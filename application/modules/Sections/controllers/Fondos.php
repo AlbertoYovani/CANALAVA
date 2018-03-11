@@ -36,4 +36,12 @@ class Fondos extends Config{
         }
         $this->setOutput(array('accion'=>'1'));
     }
+    
+    public function Eliminar_fondo() {
+        $this->config_mdl->sqlDelete('c_imagenes_fondo', array(
+           'imagen_id'=> $this->input->post('id') 
+        ));
+        
+        $this->setOutput(array('accion'=>'1'));
+    }
 }

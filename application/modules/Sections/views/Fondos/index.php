@@ -45,10 +45,7 @@
                                         <td><i class="fa fa-image i-20 ver_fondo pointer" data-img="<?= $value['imagen_archivo']?>"></i></td>
                                         <td><span class="label pointer label-success"><?=$value['imagen_estado']?></span></td>
                                         <td>
-                                            &nbsp;<a href="<?= base_url()?>Sections/Usuarios/Usuario_Add?usu=<?=$value['usuario_id']?>&accion=edit">
-                                                <i class="fa fa-pencil i-20"></i>
-                                            </a>&nbsp;
-                                            <i class="fa fa-trash-o i-20 pointer eliminar_usuario" data-id="<?=$value['usuario_id']?>"></i>
+                                            <i class="fa fa-trash-o i-20 pointer eliminar_img_fondo" data-id="<?=$value['imagen_id']?>"></i>
                                         </td>
                                     </tr>
                                     <?php }?>
