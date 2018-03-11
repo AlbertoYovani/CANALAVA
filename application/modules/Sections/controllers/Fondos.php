@@ -16,9 +16,24 @@ class Fondos extends Config{
     
     public function index() {
         
+        $query['imagenes_fondo'] = $this->config_mdl->sqlGetData("c_imagenes_fondo");
+        
+        $this->load->view("Fondos/index", $query);
     }
     
-    public function FondosLogin() {
-        $this->load->view("Usuarios/FondosLogin");
+    public function ImagenFondoLogin() {
+        $this->load->view("Fondos/FondoLogin");
+    }
+    
+    public function Ajax_guardar_fondo() {
+        $ext= md5(rand()).'.'.end(explode('.',$_FILES['imagen_fondo']['name']));
+        if(copy($_FILES['imagen_fondo']['tmp_name'],'assets/img/fondos/'.$ext)){
+            $this->config_mdl->sqlInsert('c_imagenes_fondo',array(
+                'imagen_nombre'=> $this->input->post('imagen_nombre'),
+                'imagen_archivo'=>$ext,
+                'imagen_estado'=>$this->input->post('imagen_estado'),
+            ));
+        }
+        $this->setOutput(array('accion'=>'1'));
     }
 }

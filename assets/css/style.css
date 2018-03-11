@@ -2104,12 +2104,13 @@ hr {
 }
 .page-title i {
   display: inline-block;
-  color: #73777c;
-  font-size: 30px;
-  margin-right: 12px;
+  color: #FFFFFF;
+  font-size: 12px;
+  margin-right: 0px;
   position: relative;
-  top: 7px;
+  top: 4px;
   float: left;
+  margin-left: -4px;
 }
 .page-title small {
   font-size: 14px;

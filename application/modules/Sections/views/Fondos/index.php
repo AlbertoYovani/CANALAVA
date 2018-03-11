@@ -10,8 +10,8 @@
             <br>
             <div class="grid simple ">
                 <div class="panel-heading back-canalava" style="padding: 5px 15px">
-                    <h4><span class="semi-bold" style="color: white; text-transform: uppercase;">USUARIOS</span></h4>
-                    <a href="<?= base_url()?>Sections/Usuarios/Usuario_Add?usu=0&accion=add" class="btn-circle btn-lg pull-right canalava tip rojo-canalava">
+                    <h4><span class="semi-bold" style="color: white; text-transform: uppercase;">IMAGENES DE FONDO EN LOGIN</span></h4>
+                    <a href="<?= base_url()?>Sections/Fondos/ImagenFondoLogin?id=0&accion=add" accion=add" class="btn-circle btn-lg pull-right canalava tip rojo-canalava">
                         <i class="mdi-av-my-library-add fa fa-plus" style="font-size: 30px;"></i>
                     </a> 
                 </div>
@@ -32,24 +32,18 @@
                             <table class="table footable table-bordered footable table-filtros" data-page-size="5" data-filter="#buscar">  
                                 <thead>
                                     <tr>                          
-                                        <th data-sort-ignore="true">ROL</th>
-                                        <th data-sort-ignore="true">SUB ROL</th>
                                         <th data-sort-ignore="true">NOMBRE</th>
-                                        <th data-sort-ignore="true">TÉLEFONO</th>
-                                        <th data-sort-ignore="true">EMAIL</th>
-                                        <th data-sort-ignore="true">ACCIÓN</th>             
+                                        <th data-sort-ignore="true">VISTA PREVIA</th>
+                                        <th data-sort-ignore="true">ESTADO</th>
+                                        <th data-sort-ignore="true">ACCIÓN</th>           
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($Usuarios as $value) {?>
+                                    <?php foreach ($imagenes_fondo as $value) {?>
                                     <tr>
-                                        <td><?=$value['rol_nombre']?></td>
-                                        <?php 
-                                        echo '<td>'.$value["sub_rol_nombre"].'</td>';
-                                        ?>
-                                        <td><?=$value['usuario_nombre']?> <?=$value['usuario_ap']?> <?=$value['usuario_am']?></td>
-                                        <td><?=$value['usuario_tel']?></td>
-                                        <td><?=$value['usuario_mail']?></td>
+                                        <td><?=$value['imagen_nombre']?></td>
+                                        <td><i class="fa fa-image i-20 ver_fondo pointer" data-img="<?= $value['imagen_archivo']?>"></i></td>
+                                        <td><span class="label pointer label-success"><?=$value['imagen_estado']?></span></td>
                                         <td>
                                             &nbsp;<a href="<?= base_url()?>Sections/Usuarios/Usuario_Add?usu=<?=$value['usuario_id']?>&accion=edit">
                                                 <i class="fa fa-pencil i-20"></i>
@@ -61,7 +55,7 @@
                                 </tbody>
                                 <tfoot class="hide-if-no-paging">
                                     <tr>
-                                        <td colspan="6" id="footerCeldas" class="text-center">
+                                        <td colspan="4" id="footerCeldas" class="text-center">
                                             <ul class="pagination"></ul>
                                         </td>
                                     </tr>
@@ -75,4 +69,4 @@
     </div>
 </div>
 <?=Modules::run('Sections/Menus/Footer')?>
-<script type="text/javascript" src="<?= base_url()?>assets/js/canalava/Usuarios.js?<?=md5(microtime())?>"></script>
+<script type="text/javascript" src="<?= base_url()?>assets/js/canalava/Fondos.js?<?=md5(microtime())?>"></script>
