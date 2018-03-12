@@ -48,6 +48,31 @@ $(document).ready(function(){
         });
     });
     
+    $('.estado_fondo').click( function (e) {
+        e.preventDefault();
+        var id = $(this).attr('data-id');
+        var estado = $(this).attr('data-estado');
+        if(confirm("¿DESEA AGREGAR ESTA IMAGEN PARA FONDO?")){
+            $.ajax({
+                url: base_url+'Sections/Fondos/Fondo_estados',
+                type: 'POST',
+                dataType: 'json',
+                data:{
+                    estado:estado,
+                    id:id
+                }, beforeSend: function () {
+                    msj_loading();
+                }, success: function (data) {
+                    if(data.accion === '1'){
+                        ActionWindowsReload();
+                    }
+                }, error: function (e) {
+                    e.preventDefault();
+                }
+            });
+        }
+    });
+    
     $('.eliminar_img_fondo').on('click', function(e){
         var id = $(this).attr('data-id');
         e.preventDefault();

@@ -43,7 +43,7 @@
                                     <tr>
                                         <td><?=$value['imagen_nombre']?></td>
                                         <td><i class="fa fa-image i-20 ver_fondo pointer" data-img="<?= $value['imagen_archivo']?>"></i></td>
-                                        <td><span class="label pointer label-success"><?=$value['imagen_estado']?></span></td>
+                                        <td><span class="label pointer estado_fondo label-<?= $value['imagen_estado'] == 'Activo'?'success':'important'?>" data-id="<?=$value['imagen_id']?>" data-estado="<?=$value['imagen_estado']?>"><?=$value['imagen_estado']?></span></td>
                                         <td>
                                             <i class="fa fa-trash-o i-20 pointer eliminar_img_fondo" data-id="<?=$value['imagen_id']?>"></i>
                                         </td>

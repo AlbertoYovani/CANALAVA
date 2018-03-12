@@ -37,6 +37,22 @@ class Fondos extends Config{
         $this->setOutput(array('accion'=>'1'));
     }
     
+    public function Fondo_estados() {
+        $estado = $this->input->post('estado');
+        if($estado === 'Activo'){
+            $estado = 'No Activo';
+        }else{
+            $estado = 'Activo';
+        }
+        $this->config_mdl->sqlUpdate('c_imagenes_fondo', array(
+           'imagen_estado'=> $estado
+        ), array(
+            'imagen_id'=> $this->input->post('id')
+        ));
+        
+        $this->setOutput(array('accion'=>'1'));
+    }
+    
     public function Eliminar_fondo() {
         $this->config_mdl->sqlDelete('c_imagenes_fondo', array(
            'imagen_id'=> $this->input->post('id') 
